@@ -3,13 +3,17 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "custom_commands_path": "./commands",
   "scripts": {
     "test": "nightwatch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "request": "^2.88.0",
+    "util": "^0.12.1"
+  },
   "devDependencies": {
     "chromedriver": "^78.0.1",
     "nightwatch": "^1.2.4"

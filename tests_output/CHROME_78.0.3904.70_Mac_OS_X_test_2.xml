@@ -5,9 +5,9 @@
 
   <testsuite name="test_2"
     errors="0" failures="0" hostname="" id="" package="test_2" skipped="0"
-    tests="1" time="7.492" timestamp="">
+    tests="1" time="9.261" timestamp="">
   
-    <testcase name="Verify that users can Search for and navigate to Hoodie page" classname="test_2" time="7.492" assertions="6">
+    <testcase name="Verify that users can Search for and navigate to Hoodie page" classname="test_2" time="9.261" assertions="6">
 
     
 
