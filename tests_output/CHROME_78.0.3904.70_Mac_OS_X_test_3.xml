@@ -1,13 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites errors="0"
             failures="0"
-            tests="1">
+            tests="2">
 
   <testsuite name="test_3"
     errors="0" failures="0" hostname="" id="" package="test_3" skipped="0"
-    tests="1" time="9.043" timestamp="">
+    tests="2" time="27.32" timestamp="">
   
-    <testcase name="Navigate to a product created via API and apply disccount coupon" classname="test_3" time="9.043" assertions="0">
+    <testcase name="Navigate to a product created via API and apply disccount coupon" classname="test_3" time="27.30" assertions="6">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="After API Delete Product and Code Coupon" classname="test_3" time="0.01100" assertions="0">
     </testcase>
   
 
