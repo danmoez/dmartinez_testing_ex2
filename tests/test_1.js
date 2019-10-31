@@ -10,26 +10,11 @@ module.exports = {
     var product_url= '/product/dmartinez/';
     var productQty= '7';
     var cart_url = 'cart';
-    var headers = {
-    'Authorization': 'Basic c2hvcG1hbmFnZXI6RHV1eCBQSUVkIGVVbEsgTG1pbiBjUjNjIDVpMWg=',
-    'Content-Type': 'application/json',
-    'Postman-Token': 'd2b63910-a940-4e2e-9c18-673d3fd28388',
-    'cache-control': 'no-cache'
-    };
+    
+    product_page
+        .createViaAPI();
 
-    var options = {
-    url: 'http://34.205.174.166/wp-json/wc/v3/products?consumer_key=consumer_secret&name=dmartinez&type=simple&regular_price=5&description=Sample&short_description=Testing',
-    method: 'POST',
-    headers: headers
-    };
-
-    function callback(error, response, body) {
-        if (!error && response.statusCode == 200) {
-            console.log(body);
-        }
-    }
-
-    before: request(options, callback);
+    client.refresh();
 
     page
         .navigate()
@@ -67,14 +52,18 @@ module.exports = {
     client.useCss();
     client.pause(9000);
 
-
-    afterEach : product_page
-        .deleteViaAPI();
-
     page
         .navigate()
 
     client.assert.visible(mainPageHeader, 'UI: Main Page Visible');    
+
+
+    },
+    "After API Delete Product" : function (client) {
+    
+    const product_page = client.page.product();
+    product_page
+        .deleteViaAPI();
 
     }
 }

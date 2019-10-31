@@ -31,7 +31,7 @@ module.exports = {
             };
 
             var options = {
-            url: 'http://34.205.174.166/wp-json/wc/v3/products/260?consumer_key=consumer_secret&force=true',
+            url: 'http://34.205.174.166/wp-json/wc/v3/products/277?consumer_key=consumer_secret&force=true',
             method: 'DELETE',
             headers: headers
             };
@@ -46,5 +46,28 @@ module.exports = {
 
 
             },
+        createViaAPI() { 
+            var headers = {
+            'Authorization': 'Basic c2hvcG1hbmFnZXI6RHV1eCBQSUVkIGVVbEsgTG1pbiBjUjNjIDVpMWg=',
+            'Content-Type': 'application/json',
+            'Postman-Token': 'd2b63910-a940-4e2e-9c18-673d3fd28388',
+            'cache-control': 'no-cache'
+            };
+
+            var options = {
+            url: 'http://34.205.174.166/wp-json/wc/v3/products?consumer_key=consumer_secret&name=dmartinez&type=simple&regular_price=5&description=Sample&short_description=Testing',
+            method: 'POST',
+            headers: headers
+            };
+
+            function callback(error, response, body) {
+                if (!error && response.statusCode == 200) {
+                console.log(body);
+            }
+        }
+
+        request(options, callback);
+
+        },
     }]
 };
